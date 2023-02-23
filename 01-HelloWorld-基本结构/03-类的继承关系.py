@@ -6,7 +6,7 @@ def get_sub_classes(class_, prefix="|--"):
     for subclass in class_.__subclasses__():
         print(prefix, subclass)
         if len(class_.__subclasses__()) > 0:
-            get_sub_classes(subclass, prefix+"--")
+            get_sub_classes(subclass, prefix+"|--")
 
 
 # 查看QAbstractButton抽象基类的所有子类，了解Qt6提供了哪些按钮控件
